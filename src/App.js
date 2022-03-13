@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Land from "./components/landingPage/land";
+import ProfileName from "./components/profilePage/profileName";
+import Error from "./components/errorPage/error";
+import AppContext from "./userNameContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<AppContext>
+			<div className="App bg-black font-bold">
+				<>
+					<Routes>
+						<Route path="/" element={<Land />} />
+						<Route path="/profileName" element={<ProfileName />} />
+						<Route path="*" element={<Error />} />
+					</Routes>
+				</>
+			</div>
+		</AppContext>
+	);
 }
 
 export default App;
