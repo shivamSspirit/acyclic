@@ -39,7 +39,7 @@ function Land() {
 						className="user-input text-stone-600 text-xl h-12 bg-slate-400 border-red-400 rounded-md"
 					/>
 					<button
-						className="text-center text-slate-400 text-xl border-2 border-slate-400 backdrop-blur-sm bg-transparent rounded-lg w-24 h-11 hover:bg-slate-500"
+						className="text-center text-slate-400 text-xl border-2 border-slate-400 backdrop-blur-sm bg-transparent rounded-lg w-24 h-11 hover:bg-slate-500 hover:text-black"
 						type="submit"
 					>
 						Send
